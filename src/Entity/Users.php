@@ -12,28 +12,28 @@ class Users
     #[ORM\Id]
     #[ORM\GeneratedValue]
     #[ORM\Column]
-    private ?int $id = null;
+    private ?int $id = null ;
 
     #[ORM\Column(length: 100)]
-    private ?string $Firtname = null;
+    private ?string $firstname ;
 
     #[ORM\Column(length: 100)]
-    private ?string $Lastname = null;
+    private ?string $lastname ;
 
     #[ORM\Column(type: Types::STRING, unique: true)]
-    private ?string $email = null;
+    private ?string $email ;
 
     #[ORM\Column(length: 100)]
-    private ?string $Adress = null;
+    private ?string $adress ;
 
     #[ORM\Column(length: 5)]
-    private ?string $Zipcode = null;
+    private ?string $zipcode ;
 
     #[ORM\Column(length: 100)]
-    private ?string $City = null;
+    private ?string $city ;
 
     #[ORM\Column(options: ['default'=>'CURRENT_TIMESTAMP'])]
-    private ?\DateTimeImmutable $created_at = null;
+    private ?\DateTimeImmutable $createdAt ;
 
 
     public function getId(): ?int
@@ -41,21 +41,21 @@ class Users
         return $this->id;
     }
 
-    public function getFirtname(): ?string
+    public function getfirstname(): ?string
     {
-        return $this->Firtname;
+        return $this->firstname;
     }
 
-    public function setFirtname(string $Firtname): self
+    public function setfirstname(string $firstname): self
     {
-        $this->Firtname = $Firtname;
+        $this->firstname = $firstname;
 
         return $this;
     }
 
-    public function getLastname(): ?string
+    public function getlastname(): ?string
     {
-        return $this->Lastname;
+        return $this->lastname;
     }
 
     public function getEmail(): ?string
@@ -68,64 +68,64 @@ class Users
         $this->email = $email;
     }
 
-    public function setLastname(string $Lastname): self
+    public function setlastname(string $lastname): self
     {
-        $this->Lastname = $Lastname;
+        $this->lastname = $lastname;
 
         return $this;
     }
 
-    public function getAdress(): ?string
+    public function getadress(): ?string
     {
-        return $this->Adress;
+        return $this->adress;
     }
 
-    public function setAdress(string $Adress): self
+    public function setadress(string $adress): self
     {
-        $this->Adress = $Adress;
+        $this->Adress = $adress;
 
         return $this;
     }
 
-    public function getZipcode(): ?string
+    public function getzipcode(): ?string
     {
-        return $this->Zipcode;
+        return $this->zipcode;
     }
 
-    public function setZipcode(string $Zipcode): self
+    public function setzipcode(string $zipcode): self
     {
-        $this->Zipcode = $Zipcode;
+        $this->zipcode = $zipcode;
 
         return $this;
     }
 
-    public function getCity(): ?string
+    public function getcity(): ?string
     {
-        return $this->City;
+        return $this->city;
     }
 
-    public function setCity(string $City): self
+    public function setcity(string $city): self
     {
-        $this->City = $City;
+        $this->$city = $city;
 
         return $this;
     }
 
-    public function getUserIdentifier(): string
-    {
-        // TODO: Implement getUserIdentifier() method.
-    }
-
-    public function getcreated_at(): ?\DateTimeImmutable
-    {
-        return $this->created_at;
-    }
-
-    public function setcreated_at(\DateTimeImmutable $created_at): self
-    {
-        $this->created_at = $created_at;
-
-        return $this;
-    }
+//    public function getUserIdentifier(): string
+//    {
+//        // TODO: Implement getUserIdentifier() method.
+//    }
+//
+//    public function getcreatedAt(): ?\DateTimeImmutable
+//    {
+//        return $this->createdAt;
+//    }
+//
+//    public function setcreatedAt(\DateTimeImmutable $createdAt): self
+//    {
+//        $this->createdAt = $createdAt;
+//
+//        return $this;
+//    }
 
 }
