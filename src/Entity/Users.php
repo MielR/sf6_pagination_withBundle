@@ -3,37 +3,36 @@
 namespace App\Entity;
 
 use App\Repository\UsersRepository;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
+
 #[ORM\Entity(repositoryClass: UsersRepository::class)]
-class Users
+ class Users
 {
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null ;
+    #[ORM\Column(type: 'integer',unique:true)]
+    private ?int $id ;
 
-    #[ORM\Column(length: 100)]
-    private ?string $firstname ;
+    #[ORM\Column(type: 'string', length: 100)]
+    private ?string $firstname;
 
-    #[ORM\Column(length: 100)]
-    private ?string $lastname ;
+    #[ORM\Column(type: 'string', length: 100)]
+    private ?string $lastname;
 
-    #[ORM\Column(type: Types::STRING, unique: true)]
-    private ?string $email ;
+    #[ORM\Column(type: 'string', length: 180, unique: true)]
+    private ?string $email;
 
-    #[ORM\Column(length: 100)]
-    private ?string $adress ;
+    #[ORM\Column(type: 'string', length: 100)]
+    private ?string $adress;
 
-    #[ORM\Column(length: 5)]
-    private ?string $zipcode ;
 
-    #[ORM\Column(length: 100)]
+    #[ORM\Column(type: 'string', length: 5)]
+    private ?string $zipcode;
+
+    #[ORM\Column(type: 'string', length: 255)]
     private ?string $city ;
-
-    #[ORM\Column(options: ['default'=>'CURRENT_TIMESTAMP'])]
-    private ?\DateTimeImmutable $createdAt ;
 
 
     public function getId(): ?int
@@ -58,6 +57,13 @@ class Users
         return $this->lastname;
     }
 
+    public function setlastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
+    }
+
     public function getEmail(): ?string
     {
         return $this->email;
@@ -68,13 +74,6 @@ class Users
         $this->email = $email;
     }
 
-    public function setlastname(string $lastname): self
-    {
-        $this->lastname = $lastname;
-
-        return $this;
-    }
-
     public function getadress(): ?string
     {
         return $this->adress;
@@ -82,7 +81,7 @@ class Users
 
     public function setadress(string $adress): self
     {
-        $this->Adress = $adress;
+        $this->adress = $adress;
 
         return $this;
     }
@@ -106,7 +105,7 @@ class Users
 
     public function setcity(string $city): self
     {
-        $this->$city = $city;
+        $this->city = $city;
 
         return $this;
     }
@@ -115,17 +114,6 @@ class Users
 //    {
 //        // TODO: Implement getUserIdentifier() method.
 //    }
-//
-//    public function getcreatedAt(): ?\DateTimeImmutable
-//    {
-//        return $this->createdAt;
-//    }
-//
-//    public function setcreatedAt(\DateTimeImmutable $createdAt): self
-//    {
-//        $this->createdAt = $createdAt;
-//
-//        return $this;
-//    }
+
 
 }
