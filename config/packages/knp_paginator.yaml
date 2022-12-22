@@ -1,0 +1,13 @@
+knp_paginator  :
+  _page_range_  :  5                         #  nombre de liens affichés dans le menu de pagination (ex : vous avez 10 pages, une page_range de 3, sur la 5ème page vous verrez des liens vers les pages 4, 5, 6)
+  _default_options_  :
+    _page_name_  :  page                   #  nom du paramètre de requête de la page
+    _sort_field_name_  :  sort              #  nom du paramètre de requête du champ de tri
+    _sort_direction_name_  :  direction     #  nom du paramètre de requête
+    _du sens de tri distinct_  :  true      #  garantit des résultats distincts, utile lorsque les requêtes ORM utilisent des instructions GROUP BY
+    _filter_field_name_  :  filterField     #  requête du champ de filtre nom du paramètre
+    _filter_value_name_  :  filterValue     #  nom du paramètre de requête de valeur de filtre
+  modèle de  :
+    _pagination_  :  '   templates/components/_pagination.html.twig '       #  modèle de contrôles de pagination coulissant
+    _triable_  :  '  @KnpPaginator/Pagination/sortable_link.html.twig  '     #  filtre de modèle de lien de tri
+    :  '  @  KnpPaginator/Pagination/filtration.html.twig  '                 #  modèle de filtres

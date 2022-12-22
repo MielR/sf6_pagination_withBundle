@@ -1,0 +1,40 @@
+body {
+    margin: 0;
+    position: relative;
+}
+
+.c {
+    overflow-x: hidden;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    transition: ease 1s;
+}
+
+.c_item {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    /* atao POSITION-ABSOLUTE + TOP = 0 mba anao JUQSTAPOSER Lle sary rehetra */
+}
+
+.c_item img {
+    width: 100%;
+}
+
+
+/* .previews {
+    position: relative;
+    top: 450px;
+    left: 3%;
+    z-index: 999;
+}
+
+.next {
+    position: relative;
+    top: 450px;
+    margin-left: 92%;
+    z-index: 999;
+} */
