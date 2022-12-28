@@ -1,21 +1,24 @@
 <?php
 namespace App\Entity\trait;
+use DateTimeImmutable;
 use Doctrine\ORM\Mapping as ORM ;
 
 trait CreatedAtTrait {
 
-    #[ORM\Column(options: ['default'=>'CURRENT_TIMESTAMP'])]
-    private ?\DateTimeImmutable $created_at = null;
+    #[ORM\Column(type: 'datetime_immutable',options: ['default'=>'CURRENT_TIMESTAMP'])]
+    private ?DateTimeImmutable $createdAt ;
 
-    public function getcreated_at(): ?\DateTimeImmutable
+    public function getcreatedAt(): ?DateTimeImmutable
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
-    public function setcreated_at(\DateTimeImmutable $created_at): self
+    public function setcreatedAt(DateTimeImmutable $createdAt): self
     {
-        $this->created_at = $created_at;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
 }
+
+

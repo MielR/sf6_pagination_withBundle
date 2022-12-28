@@ -3,37 +3,36 @@
 namespace App\Entity;
 
 use App\Repository\UsersRepository;
-use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
+
 #[ORM\Entity(repositoryClass: UsersRepository::class)]
-class Users
+ class Users
 {
+
     #[ORM\Id]
     #[ORM\GeneratedValue]
-    #[ORM\Column]
-    private ?int $id = null;
+    #[ORM\Column(type: 'integer',unique:true)]
+    private ?int $id ;
 
-    #[ORM\Column(length: 100)]
-    private ?string $Firtname = null;
+    #[ORM\Column(type: 'string', length: 100)]
+    private ?string $firstname;
 
-    #[ORM\Column(length: 100)]
-    private ?string $Lastname = null;
+    #[ORM\Column(type: 'string', length: 100)]
+    private ?string $lastname;
 
-    #[ORM\Column(type: Types::STRING, unique: true)]
-    private ?string $email = null;
+    #[ORM\Column(type: 'string', length: 180, unique: true)]
+    private ?string $email;
 
-    #[ORM\Column(length: 100)]
-    private ?string $Adress = null;
+    #[ORM\Column(type: 'string', length: 100)]
+    private ?string $adress;
 
-    #[ORM\Column(length: 5)]
-    private ?string $Zipcode = null;
 
-    #[ORM\Column(length: 100)]
-    private ?string $City = null;
+    #[ORM\Column(type: 'string', length: 5)]
+    private ?string $zipcode;
 
-    #[ORM\Column(options: ['default'=>'CURRENT_TIMESTAMP'])]
-    private ?\DateTimeImmutable $created_at = null;
+    #[ORM\Column(type: 'string', length: 255)]
+    private ?string $city ;
 
 
     public function getId(): ?int
@@ -41,21 +40,28 @@ class Users
         return $this->id;
     }
 
-    public function getFirtname(): ?string
+    public function getfirstname(): ?string
     {
-        return $this->Firtname;
+        return $this->firstname;
     }
 
-    public function setFirtname(string $Firtname): self
+    public function setfirstname(string $firstname): self
     {
-        $this->Firtname = $Firtname;
+        $this->firstname = $firstname;
 
         return $this;
     }
 
-    public function getLastname(): ?string
+    public function getlastname(): ?string
     {
-        return $this->Lastname;
+        return $this->lastname;
+    }
+
+    public function setlastname(string $lastname): self
+    {
+        $this->lastname = $lastname;
+
+        return $this;
     }
 
     public function getEmail(): ?string
@@ -68,64 +74,46 @@ class Users
         $this->email = $email;
     }
 
-    public function setLastname(string $Lastname): self
+    public function getadress(): ?string
     {
-        $this->Lastname = $Lastname;
+        return $this->adress;
+    }
+
+    public function setadress(string $adress): self
+    {
+        $this->adress = $adress;
 
         return $this;
     }
 
-    public function getAdress(): ?string
+    public function getzipcode(): ?string
     {
-        return $this->Adress;
+        return $this->zipcode;
     }
 
-    public function setAdress(string $Adress): self
+    public function setzipcode(string $zipcode): self
     {
-        $this->Adress = $Adress;
+        $this->zipcode = $zipcode;
 
         return $this;
     }
 
-    public function getZipcode(): ?string
+    public function getcity(): ?string
     {
-        return $this->Zipcode;
+        return $this->city;
     }
 
-    public function setZipcode(string $Zipcode): self
+    public function setcity(string $city): self
     {
-        $this->Zipcode = $Zipcode;
+        $this->city = $city;
 
         return $this;
     }
 
-    public function getCity(): ?string
-    {
-        return $this->City;
-    }
+//    public function getUserIdentifier(): string
+//    {
+//        // TODO: Implement getUserIdentifier() method.
+//    }
 
-    public function setCity(string $City): self
-    {
-        $this->City = $City;
-
-        return $this;
-    }
-
-    public function getUserIdentifier(): string
-    {
-        // TODO: Implement getUserIdentifier() method.
-    }
-
-    public function getcreated_at(): ?\DateTimeImmutable
-    {
-        return $this->created_at;
-    }
-
-    public function setcreated_at(\DateTimeImmutable $created_at): self
-    {
-        $this->created_at = $created_at;
-
-        return $this;
-    }
 
 }

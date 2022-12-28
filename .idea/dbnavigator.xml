@@ -28,6 +28,9 @@
     </execution-history>
     <argument-values-cache />
   </component>
+  <component name="DBNavigator.Project.ParserDiagnosticsManager">
+    <diagnostics-history />
+  </component>
   <component name="DBNavigator.Project.Settings">
     <connections />
     <browser-settings>

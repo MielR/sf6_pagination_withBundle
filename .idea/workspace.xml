@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b634beac-818c-4072-a4b9-8e506461f2cf" name="Changes" comment="" />
+    <list default="true" id="b634beac-818c-4072-a4b9-8e506461f2cf" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/templates/components/_sliderPagination.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/pagination/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/partials /_footer.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/partials /_header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/knp_paginator.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PaginationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PaginationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Services/PaginationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_pagination.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,6 +31,9 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Entity/Users.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -155,10 +168,17 @@
       <path value="$PROJECT_DIR$/vendor/stecman/symfony-console-completion" />
       <path value="$PROJECT_DIR$/vendor/doctrine/data-fixtures" />
       <path value="$PROJECT_DIR$/vendor/doctrine/doctrine-fixtures-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
     </include_path>
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedIndex" value="3" />
+  </component>
   <component name="ProjectId" id="2IcZ7e50H8V0hR0ehB7tSEAtRrC" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -166,18 +186,21 @@
     <option name="showURL" value="false" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SYMFONY6-Documentation" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.splitter.proportion" value="0.25832492" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/../SYMFONY6-Documentation" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -201,6 +224,22 @@
       <workItem from="1670912949101" duration="1556000" />
       <workItem from="1670918122612" duration="14360000" />
       <workItem from="1671000372351" duration="16348000" />
+      <workItem from="1671424480969" duration="1044000" />
+      <workItem from="1671427972257" duration="9322000" />
+      <workItem from="1671465516434" duration="5998000" />
+      <workItem from="1671512527436" duration="20315000" />
+      <workItem from="1671603244740" duration="734000" />
+      <workItem from="1671626769359" duration="12391000" />
+      <workItem from="1671716833412" duration="1165000" />
+      <workItem from="1671776678641" duration="5611000" />
+      <workItem from="1671791396298" duration="47000" />
+      <workItem from="1671791472264" duration="102000" />
+      <workItem from="1671791599568" duration="199000" />
+      <workItem from="1671791824343" duration="12588000" />
+      <workItem from="1671895986669" duration="596000" />
+      <workItem from="1672043790610" duration="10576000" />
+      <workItem from="1672115947894" duration="26881000" />
+      <workItem from="1672200693806" duration="9209000" />
     </task>
     <servers />
   </component>
@@ -218,5 +257,23 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/templates/Pagination/sliding.html.twig</url>
+          <line>9</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
