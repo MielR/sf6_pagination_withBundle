@@ -1,0 +1,40 @@
+<br>
+<div class="offset-1 col-lg-10" >
+    {# total items count #}
+    <div class="count">
+        <h3>Total number of Users : {{ users.getTotalItemCount }}</h3>
+    </div>
+    <br>
+    <table class="table">
+        <thead class="table-responsive-lg table-light">
+        <tr>
+            <th>Id</th>
+            <th>Firstname</th>
+            <th>Lastname</th>
+            <th>Email</th>
+            <th>Adress</th>
+            <th>Zipcode</th>
+            <th>City</th>
+        </tr>
+        </thead>
+        {# table body #}
+        <tbody>
+        {% for user in users %}
+            <tr {% if loop.index is odd %}class="color"{% endif %}>
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.adress }}</td>
+                <td>{{ user.zipcode }}</td>
+                <td>{{ user.city }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <hr>
+    <div class="d-flex justify-content-center">
+    {% do users.setPageRange(5) %}
+    {{ knp_pagination_render(users,'components/_sliderPagination.html.twig') }}
+</div>
+</div>

@@ -1,23 +1,35 @@
 <?php
 
-use Doctrine\ORM\EntityManagerInterface;
+namespace App\Controller;
 
-/**
- * @param EntityManagerInterface $entityManager
- * @param PaginatorService $paginatorService
- * @param Request $request
- * @return Response
- */
+use App\Repository\UsersRepository;
+use Knp\Component\Pager\PaginatorInterface;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use Symfony\Component\Routing\Annotation\Route;
 
-#[Route('/service', name: 'service_index')]
-  public function index(
-        EntityManagerInterface $entityManager,
-        PaginatorService $paginatorService,
-        Request $request): Response {
+class PaginationController extends AbstractController
+{
 
+    #[Route('/', name: 'listUsers')]
+    public function listUsers(
+        UsersRepository         $usersRepository,
+        PaginatorInterface      $paginator,  // or  EntityManagerInterface $entityManager,
+        Request                 $request
+    ): Response  {
 
-           return $this->render('service/index.html.twig', [
-        'services' =>
-            $paginatorService->paginate($entityManager->getRepository(Service::class)->findAll(), $request)
-    ]);
+        $data = $usersRepository->findAll(); // or  $data = $entityManager->getRepository(Users::class)->findAll();
+        $usersPagination = $paginator->paginate(
+            $data,
+            $request->query->getInt('page', 1),
+            $request->query->getInt('limit', 20)
+        );
+
+        // show $usersPagination to TWIG
+        return $this->render('pagination/index.html.twig', [
+            'users' => $usersPagination
+        ]);
+    }
 }
+
