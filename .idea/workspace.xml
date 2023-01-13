@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="b634beac-818c-4072-a4b9-8e506461f2cf" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/templates/components/_sliderPagination.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/pagination/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials /_footer.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/partials /_header.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/UsersSearch.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/UsersSearchType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/components/_searchBS5.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/components/_searchResult.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/knp_paginator.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/PaginationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PaginationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Services/PaginationService.php" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_pagination.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/UsersRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UsersRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_pagination.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_pagination.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_sliderPagination.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_prevNextPagination.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/pagination/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/pagination/index.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +38,52 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="GitToolBoxStore">
+    <option name="branchesCleanupHistory">
+      <BranchesCleanupHistory>
+        <option name="history">
+          <list>
+            <BranchCleanupEntry>
+              <option name="deletions">
+                <list>
+                  <BranchDeletion>
+                    <option name="hash" value="6b5c54053307fe264cfc1ecb39e9cb068852122f" />
+                    <option name="name" value="paginate" />
+                  </BranchDeletion>
+                </list>
+              </option>
+              <option name="timestamp" value="1672226648273" />
+            </BranchCleanupEntry>
+          </list>
+        </option>
+      </BranchesCleanupHistory>
+    </option>
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="Search" />
+                    <option name="lastUsedInstant" value="1672224889" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="paginate" />
+                    <option name="lastUsedInstant" value="1672224888" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle/templates/Pagination/sliding.html.twig" root0="FORCE_HIGHLIGHTING" root1="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/Entity/Users.php" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -173,7 +224,7 @@
     </include_path>
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedIndex" value="3" />
+    <option name="selectedIndex" value="2" />
   </component>
   <component name="ProjectId" id="2IcZ7e50H8V0hR0ehB7tSEAtRrC" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -191,9 +242,17 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="code.cleanup.on.save" value="true" />
+    <property name="com.jetbrains.php.lang.actions.generation.PhpGenerateFieldAccessorHandlerBase$MyMemberChooser.fluent.setters.last.selected" value="true" />
+    <property name="format.on.save" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../SYMFONY6-Documentation" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="optimize.imports.on.save" value="true" />
     <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="$PROJECT_DIR$" />
+    <property name="rearrange.code.on.save" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.25832492" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -202,6 +261,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/../SYMFONY6-Documentation" />
       <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/templates/components" />
     </key>
   </component>
   <component name="RunManager">
@@ -240,6 +302,22 @@
       <workItem from="1672043790610" duration="10576000" />
       <workItem from="1672115947894" duration="26881000" />
       <workItem from="1672200693806" duration="9209000" />
+      <workItem from="1672287616670" duration="15823000" />
+      <workItem from="1672307132813" duration="1750000" />
+      <workItem from="1672383217016" duration="2397000" />
+      <workItem from="1672389741931" duration="1429000" />
+      <workItem from="1672397930229" duration="3139000" />
+      <workItem from="1672401121114" duration="119000" />
+      <workItem from="1672401270980" duration="1150000" />
+      <workItem from="1672403098506" duration="33386000" />
+      <workItem from="1672480926560" duration="3251000" />
+      <workItem from="1673240298179" duration="18738000" />
+      <workItem from="1673332760364" duration="27537000" />
+      <workItem from="1673441606030" duration="1615000" />
+      <workItem from="1673444515517" duration="221000" />
+      <workItem from="1673459667092" duration="29561000" />
+      <workItem from="1673540920322" duration="2457000" />
+      <workItem from="1673589805268" duration="15000" />
     </task>
     <servers />
   </component>
