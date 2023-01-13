@@ -1,0 +1,36 @@
+{% if app.request.method == 'POST' %}{# used Form sf6 #}
+    <div>
+        {% if users | length == 0 %}
+            <h4>Aucun résulat pour votre recherche.</h4>
+        {% else %}
+            <h3 class="mt-3">Vos résulats de recherche :</h3>
+            {% for user in users %}
+                <tr {% if loop.index is odd %}class="color"{% endif %}>
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.firstname }}</td>
+                    <td>{{ user.lastname }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.adress }}</td>
+                    <td>{{ user.zipcode }}</td>
+                    <td>{{ user.city }}</td>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </div>
+{% else %}
+    {% if users is defined %}{# when no queryForm , show all db #}
+        {% for user in users %}
+            <tr {% if loop.index is odd %}class="color"{% endif %}>
+                <td>{{ user.id }}</td>
+                <td>{{ user.firstname }}</td>
+                <td>{{ user.lastname }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.adress }}</td>
+                <td>{{ user.zipcode }}</td>
+                <td>{{ user.city }}</td>
+            </tr>
+        {% endfor %}
+    {% else %}
+        <h3>la var "users est introuvables </h3>
+    {% endif %}
+{% endif %}

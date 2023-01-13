@@ -1,15 +1,39 @@
+
 <br>
-<div class="offset-1 col-lg-10" >
+<div class="container">
     {# total items count #}
     <div class="count">
         <h3>Total number of Users : {{ users.getTotalItemCount }}</h3>
     </div>
+    <hr>
     <br>
+
+    <div class="jumbotron">
+        {{ form_start(form) }}
+        <div class="form-row align-items-end">
+            <div class="col mb-3">
+                {{ form_row(form.zipcode) }}
+            </div>
+            <div class="col mb-3">
+                {{ form_row(form.city) }}
+            </div>
+            <div class="col mb-3">
+                <div class="form-group">
+                    <button class="btn btn-primary">Search </button>
+                </div>
+            </div>
+        </div>
+        {{ form_end(form) }}
+
+    </div>
+
+
+
     <table class="table">
         <thead class="table-responsive-lg table-light">
         <tr>
             <th>Id</th>
-            <th>Firstname</th>
+            <th>Firstname<a class="fa fa-"></a></th>
             <th>Lastname</th>
             <th>Email</th>
             <th>Adress</th>
@@ -19,22 +43,12 @@
         </thead>
         {# table body #}
         <tbody>
-        {% for user in users %}
-            <tr {% if loop.index is odd %}class="color"{% endif %}>
-                <td>{{ user.id }}</td>
-                <td>{{ user.firstname }}</td>
-                <td>{{ user.lastname }}</td>
-                <td>{{ user.email }}</td>
-                <td>{{ user.adress }}</td>
-                <td>{{ user.zipcode }}</td>
-                <td>{{ user.city }}</td>
-            </tr>
-        {% endfor %}
+            {% include 'components/_searchResult.html.twig' %}
         </tbody>
     </table>
     <hr>
     <div class="d-flex justify-content-center">
-    {% do users.setPageRange(5) %}
-    {{ knp_pagination_render(users,'components/_sliderPagination.html.twig') }}
-</div>
+        {% do users.setPageRange(5) %}
+        {{ knp_pagination_render(users,'components/_prevNextPagination.html.twig') }}
+    </div>
 </div>
